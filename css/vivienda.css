@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #dcdcdc;
+    display: flex;
+}
+
+/* ===== HOME ===== */
+.home {
+    background-color: #d9d9d9;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+}
+
+.login {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.title {
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.image-container img {
+    width: 70%;
+    border-radius: 5px;
+}
+
+.social {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.social a {
+    margin: 5px;
+    font-size: 30px;
+    color: black;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard {
+    display: flex;
+    background: #dcdcdc;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #3f8f8c;
+    color: black;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 12px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.sidebar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background: #eee;
+    padding: 60px;
+    border-radius: 5px;
+    flex: 1;
+    
+}
+.card.active {
+    border: 3px solid #007BFF;
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+.mora {
+    background-color: red;
+    color: black;
+}
+
+.pendiente {
+    background-color: orange;
+    color: black;
+}
+
+.pagado {
+    background-color: green;
+    color: black;
+}
+
+.estado {
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;
+    border-radius: 5px;     
+    height: 40px;             
+    width: 120px;
+}
+.number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.chart-container {
+    margin-top: 30px;
+    background: #eee;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.info-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
