@@ -33,11 +33,33 @@
         <h2>🏠 Administrador</h2>
         <nav>
             <ul>
-                <li class="menu" data-opcion="viviendas"><i class="fas fa-home"></i> Viviendas</li>
-                <li class="menu" data-opcion="parqueaderos"><i class="fas fa-car"></i> Parqueaderos</li>
-                <li class="menu" data-opcion="pagos"><i class="fas fa-credit-card"></i> Pagos</li>
-                <li class="menu" data-opcion="residentes"><i class="fas fa-users"></i> Residentes</li>
-                <li class="menu" data-opcion="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</li>
+                <li>
+                    <a href="viviendas.php">
+                        <i class="fas fa-home"></i> Viviendas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="parqueaderos.php">
+                        <i class="fas fa-car"></i> Parqueaderos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pagos.php">
+                        <i class="fas fa-car"></i> Pagos
+                    </a>
+                </li>
+                <li>
+                    <a href="registroRes.php">
+                        <i class="fas fa-car"></i> Residentes
+                    </a>
+                </li>
+                <li>
+                    <a href="registroRes.php">
+                        <i class="fas fa-car"></i> Residentes
+                    </a>
+                </li>
             </ul>
         </nav>
     </aside>
@@ -91,124 +113,6 @@
         </section>
 
     </main>
-
-    <!-- MODAL VIVIENDAS -->
-    <div id="modalViviendas" class="menu">
-        <div class="modal-content">
-
-            <span class="close" id="cerrarModal">&times;</span>
-
-            <h2>Gestión de Viviendas</h2>
-
-            <div class="resumen">
-                <div class="card-resumen">
-                    <h3>🏠 Total</h3>
-                    <p id="totalViviendas">264</p>
-                </div>
-
-                <div class="card-resumen">
-                    <h3>✅ Al día</h3>
-                    <p id="viviendasPagadas">234</p>
-                </div>
-
-                <div class="card-resumen">
-                    <h3>❌ Morosas</h3>
-                    <p id="viviendasMorosas">30</p>
-                </div>
-            </div>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Apartamento</th>
-                        <th>Torre</th>
-                        <th>Residente</th>
-                    </tr>
-                </thead>
-
-                <tbody id="tablaViviendas">
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- MODAL PARQUEADEROS -->
-    <div id="modalParqueaderos" class="menu">
-        <div class="modal-content">
-
-            <span class="close cerrarModal">&times;</span>
-
-            <h2>Parqueaderos</h2>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Residente</th>
-                        <th>Torre</th>
-                        <th>Apto</th>
-                        <th>Parqueadero</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-
-                <tbody id="tablaParqueaderos"></tbody>
-            </table>
-
-        </div>
-    </div>
-
-    <!-- MODAL PAGOS -->
-    <div id="modalPagos" class="menu">
-        <div class="modal-content">
-
-            <span class="close cerrarModal">&times;</span>
-
-            <h2>Pagos</h2>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Torre</th>
-                        <th>Apto</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-
-                <tbody id="tablaPagos"></tbody>
-            </table>
-
-            <button class="btn-pago">
-                Medios de Pago
-            </button>
-
-        </div>
-    </div>
-
-    <!-- MODAL RESIDENTES -->
-    <div id="modalResidentes" class="menu">
-        <div class="modal-content">
-
-            <span class="close cerrarModal">&times;</span>
-
-            <h2>Registrar Residente</h2>
-
-            <form id="formResidente">
-
-                <input type="text" placeholder="Nombre" required>
-                <input type="text" placeholder="Identificacion" required>
-                <input type="email" placeholder="Correo" required>
-                <input type="number" placeholder="Torre" required>
-                <input type="number" placeholder="Apartamento" required>
-
-                <button type="submit">
-                    Registrar
-                </button>
-
-            </form>
-
-        </div>
-    </div>
 
     <script src="../js/administrador.js"></script>
 </body>
