@@ -196,17 +196,10 @@
             <form id="formResidente">
 
                 <input type="text" placeholder="Nombre" required>
-                <input type="text" placeholder="Apellido" required>
+                <input type="text" placeholder="Identificacion" required>
                 <input type="email" placeholder="Correo" required>
                 <input type="number" placeholder="Torre" required>
                 <input type="number" placeholder="Apartamento" required>
-
-                <select required>
-                    <option value="">¿Tiene vehículo?</option>
-                    <option value="carro">Carro</option>
-                    <option value="moto">Moto</option>
-                    <option value="ninguno">No tiene</option>
-                </select>
 
                 <button type="submit">
                     Registrar

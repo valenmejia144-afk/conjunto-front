@@ -56,17 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 case "viviendas":
                     document.getElementById("modalViviendas").style.display = "flex";
-                    cargarViviendas();
                     break;
 
                 case "parqueaderos":
                     document.getElementById("modalParqueaderos").style.display = "flex";
-                    cargarParqueaderos();
                     break;
 
                 case "pagos":
                     document.getElementById("modalPagos").style.display = "flex";
-                    cargarPagos();
                     break;
 
                 case "residentes":
