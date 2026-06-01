@@ -92,18 +92,6 @@
 
     </main>
 
-    <!-- MENU -->
-
- 
-
-    <aside class="sidebar">
-        ...
-        <li class="menu" data-opcion="viviendas">
-            <i class="fas fa-home"></i> Viviendas
-        </li>
-        ...
-    </aside>
-
     <!-- MODAL VIVIENDAS -->
     <div id="modalViviendas" class="modal">
         <div class="modal-content">
