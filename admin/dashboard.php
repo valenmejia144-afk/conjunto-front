@@ -93,7 +93,7 @@
     </main>
 
     <!-- MODAL VIVIENDAS -->
-    <div id="modalViviendas" class="modal">
+    <div id="modalViviendas" class="menu">
         <div class="modal-content">
 
             <span class="close" id="cerrarModal">&times;</span>
@@ -133,7 +133,7 @@
     </div>
 
     <!-- MODAL PARQUEADEROS -->
-    <div id="modalParqueaderos" class="modal">
+    <div id="modalParqueaderos" class="menu">
         <div class="modal-content">
 
             <span class="close cerrarModal">&times;</span>
@@ -158,7 +158,7 @@
     </div>
 
     <!-- MODAL PAGOS -->
-    <div id="modalPagos" class="modal">
+    <div id="modalPagos" class="menu">
         <div class="modal-content">
 
             <span class="close cerrarModal">&times;</span>
@@ -186,7 +186,7 @@
     </div>
 
     <!-- MODAL RESIDENTES -->
-    <div id="modalResidentes" class="modal">
+    <div id="modalResidentes" class="menu">
         <div class="modal-content">
 
             <span class="close cerrarModal">&times;</span>
