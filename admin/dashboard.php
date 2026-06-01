@@ -54,7 +54,7 @@
                     <a href="registroRes.php">
                         <i class="fas fa-car"></i> Residentes
                     </a>
-                </li>ss="menu" data-opcion="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</li>
+                </li>    
             </ul>
             
         </nav>
