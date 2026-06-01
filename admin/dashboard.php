@@ -131,6 +131,92 @@
             </table>
         </div>
     </div>
+
+    <!-- MODAL PARQUEADEROS -->
+    <div id="modalParqueaderos" class="modal">
+        <div class="modal-content">
+
+            <span class="close cerrarModal">&times;</span>
+
+            <h2>Parqueaderos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Residente</th>
+                        <th>Torre</th>
+                        <th>Apto</th>
+                        <th>Parqueadero</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaParqueaderos"></tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- MODAL PAGOS -->
+    <div id="modalPagos" class="modal">
+        <div class="modal-content">
+
+            <span class="close cerrarModal">&times;</span>
+
+            <h2>Pagos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Torre</th>
+                        <th>Apto</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaPagos"></tbody>
+            </table>
+
+            <button class="btn-pago">
+                Medios de Pago
+            </button>
+
+        </div>
+    </div>
+
+    <!-- MODAL RESIDENTES -->
+    <div id="modalResidentes" class="modal">
+        <div class="modal-content">
+
+            <span class="close cerrarModal">&times;</span>
+
+            <h2>Registrar Residente</h2>
+
+            <form id="formResidente">
+
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellido" required>
+                <input type="email" placeholder="Correo" required>
+                <input type="number" placeholder="Torre" required>
+                <input type="number" placeholder="Apartamento" required>
+
+                <select required>
+                    <option value="">¿Tiene vehículo?</option>
+                    <option value="carro">Carro</option>
+                    <option value="moto">Moto</option>
+                    <option value="ninguno">No tiene</option>
+                </select>
+
+                <button type="submit">
+                    Registrar
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
     <script src="../js/administrador.js"></script>
 </body>
 </html>
