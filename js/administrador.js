@@ -40,51 +40,50 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-document.addEventListener("DOMContentLoaded", function () {
+// MENU
 
-    const menuItems = document.querySelectorAll(".menu");
+document.addEventListener("DOMContentLoaded", () => {
 
-    menuItems.forEach(item => {
-        item.addEventListener("click", function () {
+    const menus = document.querySelectorAll(".menu");
 
-            const opcion = this.dataset.opcion;
+    menus.forEach(menu => {
 
-            if (opcion === "dashboard") {
-                alert("Estás en Dashboard 📊");
-            }
+        menu.addEventListener("click", () => {
 
-            if (opcion === "viviendas") {
-                alert("Módulo de Viviendas 🏠");
-            }
+            const opcion = menu.dataset.opcion;
 
-            if (opcion === "parqueaderos") {
-                alert("Módulo de Parqueaderos 🚗");
-            }
+            switch(opcion){
 
-            if (opcion === "pagos") {
-                alert("Módulo de Pagos 💰");
-            }
+                case "viviendas":
+                    document.getElementById("modalViviendas").style.display = "flex";
+                    cargarViviendas();
+                    break;
 
-            if (opcion === "reportes") {
-                alert("Módulo de Reportes 📄");
-            }
+                case "parqueaderos":
+                    document.getElementById("modalParqueaderos").style.display = "flex";
+                    cargarParqueaderos();
+                    break;
 
-            if (opcion === "residentes") {
-                alert("Módulo de Residentes 👥");
-            }
+                case "pagos":
+                    document.getElementById("modalPagos").style.display = "flex";
+                    cargarPagos();
+                    break;
 
-            if (opcion === "config") {
-                alert("Configuración ⚙️");
-            }
+                case "residentes":
+                    document.getElementById("modalResidentes").style.display = "flex";
+                    break;
 
-            if (opcion === "logout") {
-                const confirmar = confirm("¿Cerrar sesión?");
-                if (confirmar) {
-                    alert("Sesión cerrada 👋");
-                }
+                case "logout":
+
+                    if(confirm("¿Desea cerrar sesión?")){
+                        window.location.href = "principal.php";
+                    }
+
+                    break;
             }
 
         });
+
     });
 
 });
