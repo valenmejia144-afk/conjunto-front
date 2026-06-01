@@ -94,7 +94,7 @@
 
     <!-- MENU -->
 
-  <body>
+ 
 
     <aside class="sidebar">
         ...
@@ -141,14 +141,8 @@
                 <tbody id="tablaViviendas">
                 </tbody>
             </table>
-
         </div>
     </div>
-
-    <script src="js/administrador.js"></script>
-
-</body>
-
     <script src="../js/administrador.js"></script>
 </body>
 </html>
