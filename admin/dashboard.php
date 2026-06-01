@@ -36,7 +36,6 @@
                 <li class="menu" data-opcion="viviendas"><i class="fas fa-home"></i> Viviendas</li>
                 <li class="menu" data-opcion="parqueaderos"><i class="fas fa-car"></i> Parqueaderos</li>
                 <li class="menu" data-opcion="pagos"><i class="fas fa-credit-card"></i> Pagos</li>
-                <li class="menu" data-opcion="reportes"><i class="fas fa-file-alt"></i> Reportes</li>
                 <li class="menu" data-opcion="residentes"><i class="fas fa-users"></i> Residentes</li>
                 <li class="menu" data-opcion="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</li>
             </ul>
