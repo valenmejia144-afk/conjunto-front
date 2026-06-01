@@ -55,11 +55,6 @@
                         <i class="fas fa-car"></i> Residentes
                     </a>
                 </li>
-                <li>
-                    <a href="registroRes.php">
-                        <i class="fas fa-car"></i> Residentes
-                    </a>
-                </li>
             </ul>
         </nav>
     </aside>
