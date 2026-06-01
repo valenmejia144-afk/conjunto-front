@@ -1,6 +1,3 @@
-<head>
-    <link rel="stylesheet" href="../css/viviendas.css">
-</head>
 
 <div id="modalViviendas" class="modal">
     <div class="modal-content">
