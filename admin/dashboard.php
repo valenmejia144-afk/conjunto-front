@@ -33,13 +33,28 @@
         <h2>🏠 Administrador</h2>
         <nav>
             <ul>
-                <a href="vivienda.php">
-                    <i class="fas fa-home"></i> Viviendas
-                </a>
-                <li class="menu" data-opcion="parqueaderos"><i class="fas fa-car"></i> Parqueaderos</li>
-                <li class="menu" data-opcion="pagos"><i class="fas fa-credit-card"></i> Pagos</li>
-                <li class="menu" data-opcion="residentes"><i class="fas fa-users"></i> Residentes</li>
-                <li class="menu" data-opcion="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</li>
+               <li>
+                    <a href="viviendas.php">
+                        <i class="fas fa-home"></i> Viviendas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="parqueaderos.php">
+                        <i class="fas fa-car"></i> Parqueaderos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pagos.php">
+                        <i class="fas fa-car"></i> Pagos
+                    </a>
+                </li>
+                <li>
+                    <a href="registroRes.php">
+                        <i class="fas fa-car"></i> Residentes
+                    </a>
+                </li>ss="menu" data-opcion="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</li>
             </ul>
             
         </nav>
