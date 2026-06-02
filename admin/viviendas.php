@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viviendas</title>
-    <link rel="stylesheet" href="../css/modalVivivenda.css">
+    <link rel="stylesheet" href="../css/administrador.css">
 
     <!-- Iconos -->
     <link rel="stylesheet"
@@ -65,7 +65,9 @@
         <div id="modalViviendas" class="modal">
             <div class="modal-content">
 
-                <span class="close" id="cerrarModal">&times;</span>
+                <a href="dashboard.php" class="btn-volver">
+                    ← Volver al Dashboard
+                </a>
 
                 <h2>Gestión de Viviendas</h2>
 
@@ -98,7 +100,6 @@
                     <tbody id="tablaViviendas">
                     </tbody>
                 </table>
-
             </div>
         </div>
 
