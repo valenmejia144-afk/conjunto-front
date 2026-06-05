@@ -9,7 +9,13 @@
     if ($_SESSION['profile'] !== 'admin') {
         die('No tiene permisos para acceder a esta página');
     }
-    
+
+    require_once __DIR__ . '/../includes/api/pagos.php';
+
+    $response = Pago::obtenerTodos();
+
+    $pagos = $response['data'] ?? [];
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -54,7 +60,12 @@
                     <a href="registroRes.php">
                         <i class="fas fa-car"></i> Residentes
                     </a>
-                </li>    
+                </li> 
+                <li>
+                    <a href="../public/principal.php" class="btn-cerrar-sesion">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </li>   
             </ul>
             
         </nav>
@@ -62,60 +73,49 @@
 
     <!-- Contenido Principal -->
     <main class="main-content">
-        <div id="modalPagos" class="modal">
-
-            <div class="modal-content">
-
-                <span class="close" id="cerrarPagos">&times;</span>
-
-                <h2>💳 Gestión de Pagos</h2>
-
-                <div class="resumen">
-
-                    <div class="card-resumen">
-                        <h3>Al Día</h3>
-                        <p id="alDia">0</p>
-                    </div>
-
-                    <div class="card-resumen">
-                        <h3>Con Deuda</h3>
-                        <p id="conDeuda">0</p>
-                    </div>
-
+        
+        <h2>💳 Pagos</h2>
+            <div class="resumen">
+                <div class="card-resumen">
+                    <h3>Al Día</h3>
+                    <p id="alDia">0</p>
                 </div>
-
-                <table>
-
-                    <thead>
-                        <tr>
-                            <th>Apartamento</th>
-                            <th>Torre</th>
-                            <th>Valor</th>
-                            <th>Fecha pago</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="tablaPagos">
-
-                    </tbody>
-
-                </table>
-
-                <div class="acciones-pago">
-
-                    <button id="btnMediosPago">
-                        💰 Medios de Pago
-                    </button>
-
+                <div class="card-resumen">
+                    <h3>Con Deuda</h3>
+                    <p id="conDeuda">0</p>
                 </div>
-
             </div>
-
-        </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Apartamento</th>
+                        <th>Torre</th>
+                        <th>Valor</th>
+                        <th>Fecha pago</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaPagos">
+                    <?php foreach($pagos as $pago): ?>
+                    
+                        <tr>
+                            <td><?= $pago['apartamento'] ?></td>
+                            <td><?= $pago['torre'] ?></td>
+                            <td>$<?= number_format($pago['valor'], 0, ',', '.') ?></td>
+                            <td><?= $pago['fecha_pago'] ?></td>
+                            <td><?= $pago['estado'] ?></td>
+                        </tr>
+                    
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <br>
+            <a href="dashboard.php" class="btn-volver">
+                 Volver 
+            </a>
     </main>
 
-    <script src="../js/administrador.js"></script>
+    <script src="../js/pagos.js"></script>
 </body>
 </html>
 

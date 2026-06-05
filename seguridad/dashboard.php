@@ -15,10 +15,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Viviendas</title>
+    <title>Seguridad</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="css/vivienda.css">
+    <link rel="stylesheet" href="../css/seguridad.css">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -27,10 +27,23 @@
     <aside class="sidebar">
         <h2>👮 Seguridad</h2>
         <ul>
-            <li><i class="fas fa-arrow-right"></i> Entradas/Salidas</a></li>
-            <li><i class="fas fa-users"></i> Visitas</a></li>
-            <li><i class="fas fa-cog"></i> Configuración</a></li>
-            <li><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+            <li>
+                <a href="registroVisitas.php">
+                    <i class="fas fa-users"></i> Visitas
+                </a>
+      
+            </li>
+            <li>
+                <a href="historialVisitas.php">
+                    <i class="fas fa-clock"></i> Historial
+                </a>
+      
+            </li>
+            <li>
+                <a href="../public/principal.php" class="btn-cerrar-sesion">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
+            </li>
         </ul>
     </aside>
 
@@ -69,6 +82,6 @@
         </section>
     </main>
     
-    <script src="js/vivienda.js"></script>
+    <script src="../js/seguridad.js"></script>
 </body>
 </html>

@@ -9,7 +9,31 @@
     if ($_SESSION['profile'] !== 'admin') {
         die('No tiene permisos para acceder a esta página');
     }
-    
+
+    require_once __DIR__ . '/../includes/api/registroRes.php';
+
+    $mensaje = '';
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        $respuesta = Registro::crear([
+            'nombre' => $_POST['nombre'],
+            'identificacion' => $_POST['identificacion'],
+            'correo' => $_POST['correo'],
+            'torre' => $_POST['torre'],
+            'numero' => $_POST['numero']
+        ]);
+
+        if (!empty($respuesta['ok'])) {
+
+            $mensaje = "Residente registrado correctamente";
+
+        } else {
+
+            $mensaje = $respuesta['mensaje'] ?? 'Error al registrar';
+
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -54,53 +78,68 @@
                     <a href="registroRes.php">
                         <i class="fas fa-car"></i> Residentes
                     </a>
-                </li>    
+                </li>  
+                 <li>
+                    <a href="../public/principal.php" class="btn-cerrar-sesion">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </li>  
             </ul>
             
         </nav>
     </aside>
 
     <!-- Contenido Principal -->
-    <main class="main-content">
-        <form action="" method="post">
+   <div class="card-formulario">
 
-            <input
-                type="text"
-                name="nombre"
-                placeholder="Nombre"
-                required>
+        <h2>Registro de Residente</h2>
+        <p>Complete la información del residente</p>
 
-            <input
-                type="text"
-                name="identificacion"
-                placeholder="Identificación"
-                required>
+        <form class="formulario" method="POST">
 
-            <input
-                type="email"
-                name="correo"
-                placeholder="Correo"
-                required>
+           <div class="campo">
+                <label>Nombre Completo</label>
+                <input type="text" name="nombre" required>
+            </div>
 
-            <input
-                type="number"
-                name="torre"
-                placeholder="Torre"
-                required>
+            <div class="campo">
+                <label>Identificación</label>
+                <input type="text" name="identificacion" required>
+            </div>
 
-            <input
-                type="text"
-                name="apartamento"
-                placeholder="Apartamento"
-                required>
 
-            <button type="submit">
-                Guardar
-            </button>
+            <div class="campo">
+                <label>Correo Electrónico</label>
+                <input type="email" name="correo" required>
+            </div>
 
-            
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Torre</label>
+                    <input type="number" name="torre" required>
+                </div>
+
+                <div class="campo">
+                    <label>Apartamento</label>
+                    <input type="text" name="numero" required>
+                </div>
+
+            </div>
+
+            <div class="botones">
+
+                <button type="submit" class="btn-guardar">
+                    <i class="fas fa-save"></i> Guardar
+                </button>
+
+                <a href="dashboard.php" class="btn-volver">
+                      Volver 
+                </a>
+            </div>
+
         </form>
-    </main>
+    </div>
 
     <script src="../js/administrador.js"></script>
 </body>

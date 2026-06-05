@@ -10,6 +10,13 @@
         die('No tiene permisos para acceder a esta página');
     }
 
+    require_once __DIR__ . '/../includes/api/residente.php';
+
+    $response = Residente::obtenerPerfil();
+
+    $datos = $response['data'] ?? [];
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -18,43 +25,12 @@
     <title>Residentes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="css/residentes.css">
+    <link rel="stylesheet" href="../css/residentes.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body class="dashboard">
-
-    <aside class="sidebar">
-        <h2>👥 Residentes</h2>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#" class="menu" data-opcion="detalle">
-                        <i class="fas fa-home"></i> Detalle de inmueble
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="menu" data-opcion="pagos">
-                        <i class="fas fa-file-invoice-dollar"></i> Información de pagos
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="menu" data-opcion="config">
-                        <i class="fas fa-cog"></i> Configuración
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" id="logout">
-                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
 
     <main class="content">
         <header class="topbar">
@@ -65,35 +41,41 @@
             </div>
         </header>
 
+        <h2>👥 Residentes</h2>
+        <br>
         <h1>Información</h1>
 
         <div class="info-grid">
             <div class="card">
                 <h3>🏠 Detalle de la vivienda</h3><br>
-                <p>🔑 Apartamento: 403</p>
-                <p>🏢 Torre: 3</p>
-                <p>🚗 Parqueadero: 15</p>
+                <p>🔑 Apartamento: <?= $datos['numero'] ?? '' ?></p>
+                <p>🏢 Torre:<?= $datos['torre'] ?? '' ?></p>
+                <p>🚗 Parqueadero: <?= $datos['parqueadero'] ?? 'No asignado' ?></p>
             </div>
 
             <div class="card">
                 <h3>✅ Estado de la vivienda</h3><br>
-                <div class="estado pagado">Pagado</div><br>
+                <div class="estado pagado"><?= $datos['estado'] ?? 'Sin información' ?></div><br>
                 <div class="fila">
                     <span>📅 Ultimo Pago:</span>
-                    <strong>10/03/26</strong>
+                    <strong><?= $datos['ultimo_pago'] ?? 'Sin pagos registrados' ?></strong>
                 </div>
 
                 <div class="fila">
                     <span>💰 Saldo Pendiente:</span>
-                    <strong>$0</strong>
+                    <strong>$<?= number_format($datos['saldo_pendiente'] ?? 0, 0, ',', '.') ?></strong>
                 </div>
 
                 <div class="fila">
                     <span>📅 Proximo Pago:</span>
-                    <strong>10/04/26</strong>
+                    <strong><?= $datos['proximo_pago'] ?? 'Sin información' ?></strong>
                 </div>
             </div>
         </div>
+        <br>
+        <a href="../public/principal.php" class="btn-cerrar-sesion">
+            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+        </a>  
     </main>
 
     <script src="js/residentes.js"></script>

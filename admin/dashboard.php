@@ -55,6 +55,11 @@
                         <i class="fas fa-car"></i> Residentes
                     </a>
                 </li>    
+                <li>
+                    <a href="../public/principal.php" class="btn-cerrar-sesion">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </li>
             </ul>
             
         </nav>

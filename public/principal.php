@@ -20,11 +20,11 @@
                     break;
 
                 case 'residente':
-                    header('Location: ../resident/dashboard.php');
+                    header('Location: ../residente/dashboard.php');
                     break;
 
                 case 'seguridad':
-                    header('Location: ../security/dashboard.php');
+                    header('Location: ../seguridad/dashboard.php');
                     break;
 
                 default:
