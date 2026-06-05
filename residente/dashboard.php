@@ -16,8 +16,8 @@
 
     $datos = $response['data'] ?? [];
     
-
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,7 +48,7 @@
         <div class="info-grid">
             <div class="card">
                 <h3>🏠 Detalle de la vivienda</h3><br>
-                <p>🔑 Apartamento: <?= $datos['numero'] ?? '' ?></p>
+                <p>🔑 Apartamento: <?= $datos['apartamento'] ?? '' ?></p>
                 <p>🏢 Torre:<?= $datos['torre'] ?? '' ?></p>
                 <p>🚗 Parqueadero: <?= $datos['parqueadero'] ?? 'No asignado' ?></p>
             </div>
@@ -78,6 +78,6 @@
         </a>  
     </main>
 
-    <script src="js/residentes.js"></script>
+    <script src="../js/residentes.js"></script>
 </body>
 </html>

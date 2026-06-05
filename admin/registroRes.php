@@ -49,6 +49,9 @@
 
     <!-- Chart.js para la gráfica -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
 
@@ -71,12 +74,12 @@
 
                 <li>
                     <a href="pagos.php">
-                        <i class="fas fa-car"></i> Pagos
+                        <i class="fa fa-credit-card-alt"></i> Pagos
                     </a>
                 </li>
                 <li>
                     <a href="registroRes.php">
-                        <i class="fas fa-car"></i> Residentes
+                        <i class="fa fa-users"></i> Residentes
                     </a>
                 </li>  
                  <li>
@@ -142,6 +145,19 @@
     </div>
 
     <script src="../js/administrador.js"></script>
+
+    <?php if (!empty($respuesta['ok'])): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '¡Registro exitoso!',
+                text: 'Residente registrado correctamente',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#28a745'
+            });
+        </script>
+    <?php endif; ?>
+
 </body>
 </html>
 

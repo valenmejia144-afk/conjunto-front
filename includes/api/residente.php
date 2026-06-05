@@ -6,7 +6,7 @@ class Residente
 {
     public static function obtenerPerfil()
     {
-        $url = API_URL . '/api/residente/perfil';
+        $url = API_URL . '/residente';
 
         $token = $_SESSION['token'];
 

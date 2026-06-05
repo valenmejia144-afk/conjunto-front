@@ -28,14 +28,64 @@ class Vivienda
 
     public static function obtenerPorId($id)
     {
-        $url = API_URL . '/viviendas/' . $id;
+        $url = API_URL . '/vivienda/' . $id;
+
+        $token = $_SESSION['token'];
 
         $ch = curl_init($url);
 
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HTTPHEADER => [
-                'Content-Type: application/json'
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $token
+            ]
+        ]);
+
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        return json_decode($response, true);
+    }
+
+    public static function eliminar($id)
+    {
+        $url = API_URL . '/vivienda/' . $id;
+
+        $token = $_SESSION['token'];
+
+        $ch = curl_init($url);
+
+        curl_setopt_array($ch, [
+            CURLOPT_CUSTOMREQUEST => 'DELETE',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => [
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $token
+            ]
+        ]);
+
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        return json_decode($response, true);
+    }
+
+    public static function actualizar($id, $datos)
+    {
+        $url = API_URL . '/vivienda/' . $id;
+
+        $token = $_SESSION['token'];
+
+        $ch = curl_init($url);
+
+        curl_setopt_array($ch, [
+            CURLOPT_CUSTOMREQUEST => 'PUT',
+            CURLOPT_POSTFIELDS => json_encode($datos),
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => [
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $token
             ]
         ]);
 

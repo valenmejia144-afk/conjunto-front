@@ -47,12 +47,12 @@
 
                 <li>
                     <a href="pagos.php">
-                        <i class="fas fa-car"></i> Pagos
+                        <i class="fa fa-credit-card-alt"></i> Pagos
                     </a>
                 </li>
                 <li>
                     <a href="registroRes.php">
-                        <i class="fas fa-car"></i> Residentes
+                        <i class="fa fa-users"></i> Residentes
                     </a>
                 </li>    
                 <li>

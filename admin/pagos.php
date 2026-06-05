@@ -53,12 +53,12 @@
 
                 <li>
                     <a href="pagos.php">
-                        <i class="fas fa-car"></i> Pagos
+                        <i class="fa fa-credit-card-alt"></i> Pagos
                     </a>
                 </li>
                 <li>
                     <a href="registroRes.php">
-                        <i class="fas fa-car"></i> Residentes
+                        <i class="fa fa-users"></i> Residentes
                     </a>
                 </li> 
                 <li>
@@ -78,11 +78,11 @@
             <div class="resumen">
                 <div class="card-resumen">
                     <h3>Al Día</h3>
-                    <p id="alDia">0</p>
+                    <p id="alDia">144</p>
                 </div>
                 <div class="card-resumen">
                     <h3>Con Deuda</h3>
-                    <p id="conDeuda">0</p>
+                    <p id="conDeuda">120</p>
                 </div>
             </div>
             <table>
